@@ -1,0 +1,54 @@
+/**********************/
+/* Estilos en general */
+/**********************/
+body {
+    background: #02010a;
+    font-family: 'Dancing Script', cursive;
+}
+
+header {
+    background: #5b7989;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    padding: 5%;
+}
+
+.pagina-actual{
+    color: #fff;
+    text-shadow: 2px 2px 0px #02010a;
+    font-size: 8.5vw;
+}
+
+.menu a{
+    color: #fff;
+    margin-right: 1rem;
+}
+
+.menu a:last-child{
+    margin-right: 0;
+}
+
+/**********************/
+/* Responsive < 900px */
+/**********************/
+@media screen and (max-width: 900px) {
+    
+    .menu {
+        margin-top:10px;
+    }
+    
+    .menu a{
+        font-size: 5vw;
+    }
+    
+
+}
+
+/**********************/
+/* Responsive > 900px */
+/**********************/
+@media screen and (min-width: 901px) {
+
+
+
+}
