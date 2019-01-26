@@ -107,6 +107,27 @@ footer {
     margin: 7px 0;
 }
 
+.galeria {
+    background: #d5c75f;
+    display: flex;
+}
+
+.galeria img:first-child{
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+}
+
+.galeria img:nth-child(2n){
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.galeria img:nth-child(3) {
+    filter: sepia(90%);
+    -webkit-filter: sepia(90%);
+}
+
+
 /**********************/
 /* Responsive < 900px */
 /**********************/
@@ -122,7 +143,7 @@ footer {
     }
     
     .menu {
-        margin-top:10px;
+        margin-top:1rem;
     }
     
     .menu a{
@@ -148,6 +169,16 @@ footer {
 
     footer > div {
         margin-bottom: 1.25rem;
+    }
+
+    .galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galeria img {
+        margin: 1rem 0;
+        width: 85%;
     }
 
 }
@@ -192,6 +223,18 @@ footer {
         width: 25%;
         padding: 10px;
         box-sizing: border-box;
+    }
+
+    .galeria {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 1%;
+    }
+
+    .galeria img {
+        width: 31.3%;
+        height: 375px;
+        margin: 1%;
     }
 
 
