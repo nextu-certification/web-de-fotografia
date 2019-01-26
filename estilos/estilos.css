@@ -13,6 +13,10 @@ header {
     padding: 5%;
 }
 
+img {
+    box-shadow: 2px 2px #02010a;
+}
+
 .pagina-actual{
     color: #fff;
     text-shadow: 2px 2px 0px #02010a;
@@ -28,6 +32,68 @@ header {
     margin-right: 0;
 }
 
+.contenido {
+    margin: 0 auto;
+}
+
+.imagen-central {
+    background: #82c3a6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0;
+}
+
+.imagen-central > img {
+    width: 85%;
+}
+
+.imagen-secundaria{
+    background: #d5c75f;
+    border: 1px solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.imagen-secundaria > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0;
+}
+
+.imagen-secundaria > div > a {
+    text-align: center;
+    text-decoration: none;
+}
+
+.imagen-secundaria > div > a > span {
+    text-decoration: underline;
+}
+
+.imagen-secundaria > div > a > img {
+    width: 85%;
+}
+
+.imagen-secundaria > div:first-child > a > img{
+    transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+}
+.imagen-secundaria > div:first-child > a > img:hover{
+    transform: rotate(10deg);
+    box-shadow: 2px 2px #82c3a6;
+}
+
+.imagen-secundaria > div:last-child > a > img{
+    transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+}
+.imagen-secundaria > div:last-child > a > img:hover{
+    transform: translate(20px, -5px);
+    box-shadow: 2px 2px #82c3a6;
+}
+
 /**********************/
 /* Responsive < 900px */
 /**********************/
@@ -40,7 +106,10 @@ header {
     .menu a{
         font-size: 5vw;
     }
-    
+
+    .contenido {
+        width: 100%;
+    }
 
 }
 
@@ -49,6 +118,8 @@ header {
 /**********************/
 @media screen and (min-width: 901px) {
 
-
+    .contenido {
+        max-width: 900px;
+    }
 
 }
