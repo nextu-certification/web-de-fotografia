@@ -9,8 +9,9 @@ body {
 header {
     background: #5b7989;
     border-radius: 10px 10px 0px 0px;
-    text-align: center;
     padding: 5%;
+    display: flex;
+    align-items: center;
 }
 
 img {
@@ -20,7 +21,6 @@ img {
 .pagina-actual{
     color: #fff;
     text-shadow: 2px 2px 0px #02010a;
-    font-size: 8.5vw;
 }
 
 .menu a{
@@ -50,10 +50,7 @@ img {
 
 .imagen-secundaria{
     background: #d5c75f;
-    border: 1px solid;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
 .imagen-secundaria > div {
@@ -94,10 +91,35 @@ img {
     box-shadow: 2px 2px #82c3a6;
 }
 
+footer {
+    border-radius: 0px 0px 10px 10px;
+    background: #C6d5c5;
+    display: flex;
+    padding: 5%;
+}
+
+.contacto, .terminos, .redes, .derechos {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto > h3, .terminos > h3, .redes > h3, .derechos > h3 {
+    margin: 7px 0;
+}
+
 /**********************/
 /* Responsive < 900px */
 /**********************/
 @media screen and (max-width: 900px) {
+
+    header{
+        flex-direction: column;
+    }
+
+    .pagina-actual{
+        font-size: 8.5vw;
+        text-align: center;
+    }
     
     .menu {
         margin-top:10px;
@@ -111,6 +133,23 @@ img {
         width: 100%;
     }
 
+    .imagen-secundaria{
+        flex-direction: column;
+    }
+
+    .imagen-secundaria > div > a > span {
+        font-size: 4.5vw;
+    }
+
+    footer {
+        flex-direction: column;
+        font-size: 4.5vw;
+    }
+
+    footer > div {
+        margin-bottom: 1.25rem;
+    }
+
 }
 
 /**********************/
@@ -118,8 +157,43 @@ img {
 /**********************/
 @media screen and (min-width: 901px) {
 
+    header {
+        text-align: left;
+        flex-direction: row;
+    }
+
+    .pagina-actual{
+        font-size: 2.5rem;
+        flex-grow: 1;
+    }
+
+    .menu a{
+        font-size: 1.5rem;
+    }
+
     .contenido {
         max-width: 900px;
     }
+
+    .imagen-secundaria{
+        flex-direction: row;;
+    }
+
+    .imagen-secundaria > div > a > span {
+        font-size: 1.8rem;
+    }
+
+    footer {
+        flex-direction: row;
+        font-size: 1.2rem;
+    }
+
+    footer > div {
+        width: 25%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+
 
 }
